@@ -8,14 +8,14 @@
 	background: none;
 	border: none;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	text-decoration: none !important;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
 	box-shadow: $px-shadow;
 	&.px-btn-theme {
-		background: $px-accent;
+		background: $px-dark;
 		color: $px-white;
 		&:after {
 			content:"";
@@ -26,7 +26,7 @@
 			top: 0;
 			width: 0px;
 			@include transition(ease all 0.35s);
-			background: $px-dark;
+			background: $px-accent;
 			z-index: -1;
 		}
 		&:hover {

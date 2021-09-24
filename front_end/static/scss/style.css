@@ -25,21 +25,37 @@ Primary use:    pxdraft
 @import url(../plugin/magnific/magnific-popup.css);
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
-  font-family: "Undeka";
-  src: url("../fonts/undeka-regular.woff") format("woff"); }
+  font-family: "Apercu";
+  src: url("../fonts/Apercu_Regular.otf") format("otf");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/Apercu_Medium.otf") format("otf");
+  font-style: normal;
+  font-weight: 600; }
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/Apercu_Bold.otf") format("otf");
+  font-style: normal;
+  font-weight: 700; }
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("../fonts/Apercu_Mono.otf") format("otf"); }
 html {
   overflow-x: hidden; }
 
 body {
-  color: #5e6472;
-  font-family: "Nunito", monospac;
+  color: #212529;
+  font-family: "Apercu", monospace;
   line-height: 1.7;
   font-size: 16px;
   font-weight: 400;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  letter-spacing: 1px; }
 
 .font-alt {
-  font-family: "Nunito", serif; }
+  font-family: "Apercu", serif; }
 
 img {
   max-width: 100%; }
@@ -189,14 +205,14 @@ mark {
   background: none;
   border: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none !important;
   position: relative;
   z-index: 1;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; }
   .px-btn.px-btn-theme {
-    background: #003536;
+    background: #0f0a0a;
     color: #fff; }
     .px-btn.px-btn-theme:after {
       content: "";
@@ -210,7 +226,7 @@ mark {
       -o-transition: ease all 0.35s;
       -webkit-transition: ease all 0.35s;
       transition: ease all 0.35s;
-      background: #0f0a0a;
+      background: #003536;
       z-index: -1; }
     .px-btn.px-btn-theme:hover {
       color: #fff; }
@@ -230,13 +246,19 @@ mark {
   background: #EAEAE1; }
 
 .brown-bg {
-  background: #D7CDC2; }
+  background: #D8CDC3; }
 
 .theme-bg {
   background: #A3C2B2; }
 
 .dark-bg {
   background: #0f0a0a; }
+
+.purple-bg {
+  background: #32283A; }
+
+.white-bg {
+  background: #fff; }
 
 .color-dark {
   color: #0f0a0a; }
@@ -246,6 +268,9 @@ mark {
 
 .color-theme {
   color: #A3C2B2; }
+
+.color-purple::after {
+  color: #32283A; }
 
 .navbar-toggler,
 .toggler-menu {
@@ -426,7 +451,7 @@ mark {
   .blog-post .data small {
     font-size: 13px;
     text-transform: uppercase;
-    color: #5e6472;
+    color: #212529;
     margin-top: 7px;
     display: inline-block;
     width: 100%;
@@ -553,7 +578,7 @@ mark {
     .blog-aside .post-aside .post-aside-meta {
       padding-bottom: 10px; }
       .blog-aside .post-aside .post-aside-meta a {
-        color: #5e6472;
+        color: #212529;
         font-size: 12px;
         text-transform: uppercase;
         display: inline-block;
@@ -573,7 +598,7 @@ mark {
     color: #0f0a0a;
     font-weight: 600; }
   .blog-aside .latest-post-aside .lpa-meta a {
-    color: #5e6472;
+    color: #212529;
     font-size: 12px;
     text-transform: uppercase;
     display: inline-block;
@@ -697,7 +722,7 @@ mark {
       bottom: 0;
       margin: auto;
       height: 2px;
-      background: #664C77;
+      background: #32283A;
       position: absolute;
       -moz-transition: ease all 0.55s;
       -o-transition: ease all 0.55s;
@@ -729,7 +754,7 @@ mark {
     -o-transition: ease all 0.35s;
     -webkit-transition: ease all 0.35s;
     transition: ease all 0.35s;
-    background: #664C77;
+    background: #32283A;
     opacity: 0.8; }
   .portfolio-box-01 .portfolio-info {
     padding-bottom: 20px; }
@@ -779,6 +804,20 @@ mark {
   width: 7em;
   height: 7em; }
 
+.left-arc {
+  background-image: url("../img/decorations/arc_left.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: left;
+  background-size: auto 70%; }
+
+.right-arc {
+  background-image: url("../img/decorations/arc_right.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+  background-size: auto 100%; }
+
 /* Section
 ---------------------*/
 .section {
@@ -793,20 +832,114 @@ mark {
       padding-top: 60px;
       padding-bottom: 60px; } }
 
+.portfolio-bg {
+  position: relative;
+  overflow: hidden; }
+  .portfolio-bg:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("../img/decorations/a_listrado.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: auto 100%; }
+    @media (max-width: 991px) {
+      .portfolio-bg:before {
+        display: none; } }
+  .portfolio-bg:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 16%;
+    background-image: url("../img/patterns/pedrinhas.svg");
+    background-repeat: repeat;
+    background-position-y: top;
+    background-position-x: left;
+    background-size: 170px 170px; }
+    @media (max-width: 991px) {
+      .portfolio-bg:after {
+        display: none; } }
+  .portfolio-bg .container {
+    position: relative;
+    z-index: 1; }
+
+.side-squares {
+  position: relative;
+  overflow: hidden; }
+  .side-squares:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 16%;
+    background-image: url("../img/patterns/quadrados.svg");
+    background-repeat: repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: 150px 150px; }
+    @media (max-width: 1200px) {
+      .side-squares:after {
+        display: none; } }
+
+.services-bg {
+  position: relative;
+  overflow: hidden; }
+  .services-bg:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 16%;
+    background-image: url("../img/patterns/quadrados.svg");
+    background-repeat: repeat;
+    background-position-y: top;
+    background-position-x: left;
+    background-size: 150px 150px; }
+    @media (max-width: 1200px) {
+      .services-bg:after {
+        display: none; } }
+
+.side-m {
+  position: relative;
+  overflow: hidden; }
+  .side-m:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 6em;
+    right: 4em;
+    width: 100%;
+    background-image: url("../img/decorations/m_maiusculo.svg");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: right;
+    background-size: 150px 150px; }
+    @media (max-width: 1200px) {
+      .side-m:after {
+        display: none; } }
+
 .after-left-section {
   position: relative;
   overflow: hidden; }
-  .after-left-section:after {
+  .after-left-section:before {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     width: 40%;
-    background-size: 120px 120px;
-    background-image: url("../img/dark-bg.png"); }
+    background: #003536 url("../img/patterns/qm.svg") repeat;
+    background-size: 100px 100px; }
     @media (max-width: 991px) {
-      .after-left-section:after {
+      .after-left-section:before {
         display: none; } }
   .after-left-section .container {
     position: relative;
@@ -829,7 +962,7 @@ mark {
       position: absolute;
       width: 40px;
       height: 3px;
-      background: #664C77;
+      background: #A3C2B2;
       left: 0;
       right: 0;
       bottom: 0;
@@ -896,14 +1029,14 @@ mark {
         top: -100px;
         left: -50px; } }
     .home-banner .top-style svg {
-      color: #664C77; }
+      color: #32283A; }
   .home-banner .bottom-style {
     position: absolute;
     width: 400px;
     bottom: -150px;
     right: -50px; }
     .home-banner .bottom-style svg {
-      color: #664C77; }
+      color: #32283A; }
     @media (max-width: 767px) {
       .home-banner .bottom-style {
         opacity: 0; } }
@@ -924,7 +1057,8 @@ mark {
       font-size: 90px;
       color: #fff;
       font-weight: 700;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      text-transform: uppercase; }
       @media (max-width: 767px) {
         .home-banner .hb-typo h1 {
           font-size: 45px; } }
@@ -991,8 +1125,8 @@ mark {
 .about-section .img-box {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  background: #fff;
-  padding: 10px; }
+  background: #0f0a0a;
+  padding: 6px; }
   .about-section .img-box img {
     position: relative; }
 .about-section .typo-box {
@@ -1043,7 +1177,7 @@ mark {
     -o-transition: ease all 0.35s;
     -webkit-transition: ease all 0.35s;
     transition: ease all 0.35s;
-    background: #664C77;
+    background: #003536;
     opacity: 0.8;
     z-index: -1; }
   .feature-box-01 .icon {
@@ -1052,7 +1186,7 @@ mark {
     line-height: 60px;
     font-size: 50px;
     margin-bottom: 20px;
-    color: #664C77; }
+    color: #A3C2B2; }
   .feature-box-01 h5 {
     color: #0f0a0a;
     font-weight: 600; }
@@ -1061,7 +1195,7 @@ mark {
   .feature-box-01:hover {
     color: rgba(255, 255, 255, 0.7); }
     .feature-box-01:hover .icon {
-      color: #fff; }
+      color: #A3C2B2; }
     .feature-box-01:hover h5 {
       color: #fff; }
     .feature-box-01:hover:after {
@@ -1146,7 +1280,7 @@ mark {
 .skill-lt.lg .skill-bar .skill-bar-in {
   height: 10px; }
 .skill-lt.light .skill-bar {
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(15, 10, 10, 0.5); }
 
 /* Testimonials
 ---------------------*/

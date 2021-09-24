@@ -1,31 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
+
 @font-face {
-    font-family: "Undeka";
-    src: url("../fonts/undeka-regular.woff") format("woff");
+    font-family: "Apercu";
+    src: url("../fonts/Apercu_Regular.otf") format("otf");
+    font-style: normal;
+    font-weight: 400;
 }
+
+@font-face {
+    font-family: "Apercu";
+    src: url("../fonts/Apercu_Medium.otf") format('otf');
+    font-style: normal;
+    font-weight: 600;
+  }
+
+@font-face {
+    font-family: "Apercu";
+    src: url("../fonts/Apercu_Bold.otf") format("otf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Apercu Mono";
+    src: url("../fonts/Apercu_Mono.otf") format("otf");
+}
+
 
 $px-theme:			#A3C2B2 !default;
 $px-accent:         #003536 !default;
 $px-dark:			#0f0a0a !default;
 
 $px-white:			#fff !default;
-$px-black:			#000 !default;
+$px-black:			#0f0a0a !default;
 
 // plano de fundo de seção destacada
 $px-gray:			  #EAEAE1 !default;
-$px-brown:            #D7CDC2 !default;
-$px-purple:           #664C77 !default;
+$px-brown:            #D8CDC3 !default;
+$px-purple:           #32283A !default;
 
 //003536
-$px-body:			#5e6472 !default;
+$px-body:			#212529 !default;
 $px-font-size:		16px !default;
 $px-line-height:	1.7 !default;
-$px-font:			'Nunito', monospac !default;
-$px-font-alt:		'Nunito', serif !default;
+$px-font:			'Apercu', monospace !default;
+$px-font-alt:		'Apercu', serif !default;
 
 $px-shadow:			rgba(0, 0, 0, 0.25) 0px 25px 50px -12px !default;
-$px-shadow-sm:			rgba(0, 0, 0, 0.25) 0px 7px 20px -22px !default;
+$px-shadow-sm:		rgba(0, 0, 0, 0.25) 0px 7px 20px -22px !default;
 
 
 // Breakpoints

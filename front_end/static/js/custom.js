@@ -48,11 +48,11 @@
     var HscrollTop  = $(window).scrollTop();  
       if (HscrollTop >= 100) {
          $('body').addClass('fixed-header');
-         $('#logo').attr("src","static/img/M.PNG");
+         $('#logo').attr("src","static/img/decorations/m_maiusculo.svg");
       }
       else {
          $('body').removeClass('fixed-header');
-         $('#logo').attr("src","static/img/M2.PNG");
+         $('#logo').attr("src","static/img/decorations/m_maiusculo_b.svg");
       }
   }
 

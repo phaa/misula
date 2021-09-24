@@ -33,7 +33,8 @@ DEBUG = env('DEBUG')
 
 #misulaaec.com.br
 ALLOWED_HOSTS = [
-    'misulaaec.com.br'
+    'misulaaec.com.br',
+    'localhost'
 ]
 
 

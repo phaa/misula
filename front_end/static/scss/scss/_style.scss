@@ -6,6 +6,24 @@
 	width: 7em;
 	height: 7em;
 }
+
+.left-arc {
+	background-image: url('../img/decorations/arc_left.svg');
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+	background-position-x: left;
+	background-size: auto 70%;
+}
+
+.right-arc {
+	background-image: url('../img/decorations/arc_right.svg');
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: right;
+	background-size: auto 100%;
+}
+
+
 /* Section
 ---------------------*/
 .section {
@@ -21,7 +39,48 @@
 	}
 }
 
-.after-left-section {
+.portfolio-bg {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-image: url('../img/decorations/a_listrado.svg');
+		background-repeat: no-repeat;
+		background-position-y: bottom;
+		background-position-x: left;
+		background-size: auto 100%;
+		@include down-md {
+			display: none;
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 16%;
+		background-image: url('../img/patterns/pedrinhas.svg');
+		background-repeat: repeat;
+		background-position-y: top;
+		background-position-x: left;
+		background-size: 170px 170px;
+		@include down-md {
+			display: none;
+		}
+	}
+	.container {
+		position: relative;
+		z-index: 1;		
+	}
+}
+
+.side-squares {
 	position: relative;
 	overflow: hidden;
 	&:after {
@@ -29,10 +88,73 @@
 		position: absolute;
 		bottom: 0;
 		top: 0;
+		right: 0;
+		width: 16%;
+		background-image: url('../img/patterns/quadrados.svg');
+		background-repeat: repeat;
+		background-position-y: bottom;
+		background-position-x: left;
+		background-size: 150px 150px;
+		@include down-lg {
+			display: none;
+		}
+	}
+}
+
+.services-bg {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 16%;
+		background-image: url('../img/patterns/quadrados.svg');
+		background-repeat: repeat;
+		background-position-y: top;
+		background-position-x: left;
+		background-size: 150px 150px;
+		@include down-lg {
+			display: none;
+		}
+	}
+}
+
+.side-m {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 6em;
+		right: 4em;
+		width: 100%;
+		background-image: url('../img/decorations/m_maiusculo.svg');
+		background-repeat: no-repeat;
+		background-position-y: top;
+		background-position-x: right;
+		background-size: 150px 150px;
+		@include down-lg {
+			display: none;
+		}
+	}
+}
+
+.after-left-section {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
 		left: 0;
 		width: 40%;
-		background-size: 120px 120px;
-		background-image: url('../img/dark-bg.png');
+		background: $px-accent url('../img/patterns/qm.svg') repeat;
+		background-size: 100px 100px;
 		@include down-md {
 			display: none;
 		}
@@ -60,7 +182,7 @@
 			position: absolute;
 			width: 40px;
 			height: 3px;
-			background: $px-purple;
+			background: $px-theme;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -176,6 +298,7 @@
 			color: $px-white;
 			font-weight: 700; 
 			margin-bottom: 15px;
+			text-transform: uppercase;
 			@include down-sm {
 				font-size: 45px;
 			}
@@ -255,8 +378,8 @@
 	.img-box {
 		position: relative;
 		box-shadow: $px-shadow;
-		background: $px-white;
-		padding: 10px;
+		background: $px-black;
+		padding: 6px;
 		img {
 			position: relative;
 		}
@@ -313,7 +436,7 @@
         height: 0;
         width: 100%;
         @include transition(ease all 0.35s);
-        background: $px-purple;
+        background: $px-accent;
         opacity: 0.8;
         z-index: -1;
     }
@@ -323,7 +446,7 @@
 		line-height: 60px;
 		font-size: 50px; 
 		margin-bottom: 20px;
-		color: $px-purple;
+		color: $px-theme;
 	}
 	h5 {
 		color: $px-dark;
@@ -335,7 +458,7 @@
 	&:hover {
 		color: rgba($px-white, 0.7);
 		.icon {
-			color: $px-white;
+			color: $px-theme;
 		}
 		h5 {
 			color: $px-white;
