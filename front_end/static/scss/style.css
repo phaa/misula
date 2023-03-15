@@ -248,17 +248,17 @@ mark {
 .brown-bg {
   background: #D8CDC3; }
 
-.theme-bg {
-  background: #A3C2B2; }
-
 .dark-bg {
   background: #0f0a0a; }
+
+.theme-bg {
+  background: #A3C2B2; }
 
 .purple-bg {
   background: #32283A; }
 
-.white-bg {
-  background: #fff; }
+.dark-gray-bg {
+  background: #A3A396; }
 
 .color-dark {
   color: #0f0a0a; }
@@ -698,6 +698,43 @@ mark {
 
 /*Portfolio
 ---------------------*/
+.portfolio-bg {
+  position: relative;
+  overflow: hidden; }
+  .portfolio-bg:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("../img/decorations/a_listrado.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: auto 100%; }
+    @media (max-width: 991px) {
+      .portfolio-bg:before {
+        display: none; } }
+  .portfolio-bg:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 16%;
+    background-image: url("../img/patterns/pedrinhas.svg");
+    background-repeat: repeat;
+    background-position-y: center;
+    background-position-x: left;
+    background-size: 170px 170px; }
+    @media (max-width: 991px) {
+      .portfolio-bg:after {
+        display: none; } }
+  .portfolio-bg .container {
+    position: relative;
+    z-index: 1; }
+
 .portfolio-filter-01 {
   padding-top: 15px;
   padding-bottom: 15px; }
@@ -814,9 +851,25 @@ mark {
 .right-arc {
   background-image: url("../img/decorations/arc_right.svg");
   background-repeat: no-repeat;
-  background-position-y: center;
+  background-position-y: bottom;
   background-position-x: right;
-  background-size: auto 100%; }
+  background-size: auto 70%; }
+
+.duna {
+  position: relative;
+  overflow: hidden; }
+  .duna:before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-image: url("../img/decorations/duna.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: 300px 300px; }
 
 /* Section
 ---------------------*/
@@ -832,47 +885,22 @@ mark {
       padding-top: 60px;
       padding-bottom: 60px; } }
 
-.portfolio-bg {
+.after-left-section {
   position: relative;
   overflow: hidden; }
-  .portfolio-bg:before {
+  .after-left-section:before {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
-    width: 100%;
-    background-image: url("../img/decorations/a_listrado.svg");
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: left;
-    background-size: auto 100%; }
+    width: 40%;
+    background: #003536 url("../img/patterns/qm.svg") repeat;
+    background-size: 100px 100px; }
     @media (max-width: 991px) {
-      .portfolio-bg:before {
+      .after-left-section:before {
         display: none; } }
-  .portfolio-bg:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    width: 16%;
-    background-image: url("../img/patterns/pedrinhas.svg");
-    background-repeat: repeat;
-    background-position-y: top;
-    background-position-x: left;
-    background-size: 170px 170px; }
-    @media (max-width: 991px) {
-      .portfolio-bg:after {
-        display: none; } }
-  .portfolio-bg .container {
-    position: relative;
-    z-index: 1; }
-
-.side-squares {
-  position: relative;
-  overflow: hidden; }
-  .side-squares:after {
+  .after-left-section:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -881,31 +909,56 @@ mark {
     width: 16%;
     background-image: url("../img/patterns/quadrados.svg");
     background-repeat: repeat;
-    background-position-y: bottom;
+    background-position-y: center;
     background-position-x: left;
     background-size: 150px 150px; }
     @media (max-width: 1200px) {
-      .side-squares:after {
+      .after-left-section:after {
         display: none; } }
+  .after-left-section .container {
+    position: relative;
+    z-index: 1; }
 
 .services-bg {
   position: relative;
   overflow: hidden; }
-  .services-bg:after {
+  .services-bg:before {
     content: "";
     position: absolute;
     bottom: 0;
     top: 0;
     right: 0;
-    width: 16%;
-    background-image: url("../img/patterns/quadrados.svg");
-    background-repeat: repeat;
-    background-position-y: top;
+    width: 100%;
+    background-image: url("../img/decorations/arc_left.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
     background-position-x: left;
-    background-size: 150px 150px; }
-    @media (max-width: 1200px) {
+    background-size: auto 70%; }
+    @media (max-width: 991px) {
+      .services-bg:before {
+        display: none; } }
+  .services-bg:after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 170px;
+    /* half of width*/
+    height: 340px;
+    border-radius: 170px 0 0 170px;
+    background-color: #A3C2B2; }
+    @media (max-width: 991px) {
       .services-bg:after {
         display: none; } }
+
+.skills-bg {
+  position: relative;
+  overflow: hidden; }
 
 .side-m {
   position: relative;
@@ -925,25 +978,6 @@ mark {
     @media (max-width: 1200px) {
       .side-m:after {
         display: none; } }
-
-.after-left-section {
-  position: relative;
-  overflow: hidden; }
-  .after-left-section:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    width: 40%;
-    background: #003536 url("../img/patterns/qm.svg") repeat;
-    background-size: 100px 100px; }
-    @media (max-width: 991px) {
-      .after-left-section:before {
-        display: none; } }
-  .after-left-section .container {
-    position: relative;
-    z-index: 1; }
 
 .section-title {
   padding-bottom: 40px; }
@@ -1298,7 +1332,7 @@ mark {
       left: 5px;
       right: 30px;
       z-index: -1;
-      border: 2px solid #A3C2B2; }
+      border: 2px solid #32283A; }
   .testmonial-box .testmonial-text {
     padding-left: 20px; }
     .testmonial-box .testmonial-text p {

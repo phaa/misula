@@ -1,6 +1,45 @@
 /*Portfolio
 ---------------------*/
-
+.portfolio-bg {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-image: url('../img/decorations/a_listrado.svg');
+		background-repeat: no-repeat;
+		background-position-y: bottom;
+		background-position-x: left;
+		background-size: auto 100%;
+		@include down-md {
+			display: none;
+		}
+	}
+    &:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 16%;
+		background-image: url('../img/patterns/pedrinhas.svg');
+		background-repeat: repeat;
+		background-position-y: center;
+		background-position-x: left;
+		background-size: 170px 170px;
+		@include down-md {
+			display: none;
+		}
+	}
+	.container {
+		position: relative;
+		z-index: 1;		
+	}
+}
 
 .portfolio-filter-01 {
     padding-top: 15px;

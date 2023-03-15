@@ -18,11 +18,28 @@
 .right-arc {
 	background-image: url('../img/decorations/arc_right.svg');
 	background-repeat: no-repeat;
-	background-position-y: center;
+	background-position-y: bottom;
 	background-position-x: right;
-	background-size: auto 100%;
+	background-size: auto 70%;
 }
 
+.duna {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -12px;
+		top: 0;
+		right: 0;
+		width: 100%;
+		background-image: url('../img/decorations/duna.svg');
+		background-repeat: no-repeat;
+		background-position-y: bottom;
+		background-position-x: left;
+		background-size: 300px 300px;
+	}
+}
 
 /* Section
 ---------------------*/
@@ -39,7 +56,7 @@
 	}
 }
 
-.portfolio-bg {
+.after-left-section {
 	position: relative;
 	overflow: hidden;
 	&:before {
@@ -48,12 +65,9 @@
 		bottom: 0;
 		top: 0;
 		left: 0;
-		width: 100%;
-		background-image: url('../img/decorations/a_listrado.svg');
-		background-repeat: no-repeat;
-		background-position-y: bottom;
-		background-position-x: left;
-		background-size: auto 100%;
+		width: 40%;
+		background: $px-accent url('../img/patterns/qm.svg') repeat;
+		background-size: 100px 100px;
 		@include down-md {
 			display: none;
 		}
@@ -65,12 +79,12 @@
 		top: 0;
 		right: 0;
 		width: 16%;
-		background-image: url('../img/patterns/pedrinhas.svg');
+		background-image: url('../img/patterns/quadrados.svg');
 		background-repeat: repeat;
-		background-position-y: top;
+		background-position-y: center;
 		background-position-x: left;
-		background-size: 170px 170px;
-		@include down-md {
+		background-size: 150px 150px;
+		@include down-lg {
 			display: none;
 		}
 	}
@@ -80,46 +94,51 @@
 	}
 }
 
-.side-squares {
-	position: relative;
-	overflow: hidden;
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		right: 0;
-		width: 16%;
-		background-image: url('../img/patterns/quadrados.svg');
-		background-repeat: repeat;
-		background-position-y: bottom;
-		background-position-x: left;
-		background-size: 150px 150px;
-		@include down-lg {
-			display: none;
-		}
-	}
-}
-
 .services-bg {
 	position: relative;
 	overflow: hidden;
-	&:after {
+	&:before {
 		content: "";
 		position: absolute;
 		bottom: 0;
 		top: 0;
 		right: 0;
-		width: 16%;
-		background-image: url('../img/patterns/quadrados.svg');
-		background-repeat: repeat;
-		background-position-y: top;
+		width: 100%;
+		background-image: url('../img/decorations/arc_left.svg');
+		background-repeat: no-repeat;
+		background-position-y: bottom;
 		background-position-x: left;
-		background-size: 150px 150px;
-		@include down-lg {
+		background-size: auto 70%;
+		@include down-md {
 			display: none;
 		}
 	}
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		right: 0;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		//width: 16%;
+		width: 170px; /* half of width*/
+		height: 340px; 
+		border-radius: 170px 0 0 170px;
+		background-color: $px-theme;
+		@include down-md {
+			display: none;
+		}
+	}
+	
+}
+
+.skills-bg {
+	position: relative;
+	overflow: hidden;
+
 }
 
 .side-m {
@@ -140,28 +159,6 @@
 		@include down-lg {
 			display: none;
 		}
-	}
-}
-
-.after-left-section {
-	position: relative;
-	overflow: hidden;
-	&:before {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		width: 40%;
-		background: $px-accent url('../img/patterns/qm.svg') repeat;
-		background-size: 100px 100px;
-		@include down-md {
-			display: none;
-		}
-	}
-	.container {
-		position: relative;
-		z-index: 1;		
 	}
 }
 
@@ -598,7 +595,7 @@
 			left: 5px;
 			right: 30px;
 			z-index: -1;
-			border: 2px solid $px-theme;
+			border: 2px solid $px-purple;
 		}
 	}
 	.testmonial-text {
